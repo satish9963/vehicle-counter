@@ -1,0 +1,106 @@
+version: '3.8'
+
+services:
+  # Vehicle Counter Backend API
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vehicle-counter-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - BACKEND_HOST=0.0.0.0
+      - BACKEND_PORT=8000
+    volumes:
+      - ./uploads:/app/uploads
+      - ./results:/app/results
+      - ./models:/app/models
+      - yolo-cache:/root/.yolo
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - vehicle-counter-network
+    # For GPU support, uncomment:
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+
+  # Optional: PostgreSQL Database (for production)
+  # Uncomment to enable persistent storage
+  # postgres:
+  #   image: postgres:15-alpine
+  #   container_name: vehicle-counter-db
+  #   environment:
+  #     POSTGRES_USER: vehiclecounter
+  #     POSTGRES_PASSWORD: ${DB_PASSWORD:-changeme}
+  #     POSTGRES_DB: vehicle_counter
+  #   volumes:
+  #     - postgres-data:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+  #   restart: unless-stopped
+  #   networks:
+  #     - vehicle-counter-network
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "pg_isready -U vehiclecounter"]
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 5
+
+  # Optional: Redis Cache (for improved performance)
+  # Uncomment to enable caching
+  # redis:
+  #   image: redis:7-alpine
+  #   container_name: vehicle-counter-cache
+  #   ports:
+  #     - "6379:6379"
+  #   restart: unless-stopped
+  #   networks:
+  #     - vehicle-counter-network
+  #   healthcheck:
+  #     test: ["CMD", "redis-cli", "ping"]
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 5
+
+volumes:
+  yolo-cache:
+    driver: local
+  # postgres-data:
+  #   driver: local
+
+networks:
+  vehicle-counter-network:
+    driver: bridge
+
+# Usage:
+# 
+# Build and start:
+#   docker-compose up --build
+#
+# Run in background:
+#   docker-compose up -d
+#
+# View logs:
+#   docker-compose logs -f backend
+#
+# Stop services:
+#   docker-compose down
+#
+# Stop and remove volumes:
+#   docker-compose down -v
+#
+# Access API:
+#   http://localhost:8000
+#   http://localhost:8000/docs (Swagger UI)

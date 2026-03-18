@@ -1,0 +1,136 @@
+════════════════════════════════════════════════════════════════
+                    BUTTON FINDING GUIDE
+════════════════════════════════════════════════════════════════
+
+You are looking for a BUTTON that says: "Commit new file"
+
+THIS BUTTON IS:
+✅ GREEN (bright green color)
+✅ At the BOTTOM of the page
+✅ Next to a gray "Cancel" button
+
+════════════════════════════════════════════════════════════════
+
+HOW TO FIND IT:
+
+🎯 FASTEST METHOD (10 seconds):
+   Press: Ctrl + End (Windows)
+   or     Cmd + End (Mac)
+   
+   This jumps to the bottom of the page instantly.
+   You should now see the green button.
+
+📜 MANUAL METHOD (30 seconds):
+   1. Use your mouse wheel
+   2. Scroll down (click wheel or drag scroll bar)
+   3. Keep scrolling until you reach the bottom
+   4. Look for the green "Commit new file" button
+   5. Click it once
+
+⌨️ KEYBOARD METHOD (30 seconds):
+   1. Press Tab 5-10 times
+   2. Watch for a button to become highlighted
+   3. When green "Commit new file" is highlighted
+   4. Press Enter
+
+════════════════════════════════════════════════════════════════
+
+IF YOU CAN'T FIND THE BUTTON:
+
+❓ Question: What do you see on your screen?
+   - Code editor with YAML?
+   - Text saying "Commit message"?
+   - Any buttons at all?
+
+❓ Question: Have you scrolled all the way down?
+   - Can you scroll anymore?
+   - Is there space below the code?
+
+❓ Question: Are you on the right page?
+   - Does it say ".github/workflows/build-exe.yml" at top?
+   - Is there YAML code in the editor?
+
+════════════════════════════════════════════════════════════════
+
+DESCRIBE WHAT YOU SEE:
+
+After pasting the YAML code, describe to me:
+
+"After the code ends, I can see:
+- [Describe what you see here]
+
+At the bottom of my screen, there is:
+- [Describe buttons, text, or nothing]"
+
+Then I can help you find the button!
+
+════════════════════════════════════════════════════════════════
+
+BUTTON APPEARANCE GUIDE:
+
+It looks like this:
+
+┌────────────────────────────────────┐
+│ [Cancel]   [Commit new file]  ✅   │
+│            ↑                        │
+│         GREEN BUTTON                │
+│         CLICK HERE                  │
+└────────────────────────────────────┘
+
+════════════════════════════════════════════════════════════════
+
+WHAT HAPPENS WHEN YOU CLICK:
+
+✅ Page loads briefly
+✅ You see "1 commit created" message
+✅ OR page refreshes and shows the file
+✅ Either way = SUCCESS!
+
+════════════════════════════════════════════════════════════════
+
+THEN WHAT:
+
+After you click the button:
+
+1. GitHub has your workflow file
+2. GitHub Actions is now configured
+3. Build will start automatically
+4. Go to "Actions" tab to watch it
+5. Wait 15-20 minutes
+6. Download your .exe files
+
+════════════════════════════════════════════════════════════════
+
+QUICK ACTION STEPS:
+
+⏱️  Step 1: Press Ctrl+End or Cmd+End (10 seconds)
+👀 Step 2: Look at bottom of screen (5 seconds)
+🎯 Step 3: Find green button (5 seconds)
+🖱️  Step 4: Click it (2 seconds)
+✅ Step 5: See success message (1 second)
+
+TOTAL TIME: ~25 seconds
+
+════════════════════════════════════════════════════════════════
+
+DO THIS RIGHT NOW:
+
+1. Stop reading
+2. Press Ctrl+End (Windows) or Cmd+End (Mac)
+3. Look for the green button
+4. Click it
+5. Come back and tell me if you found it
+
+════════════════════════════════════════════════════════════════
+
+I'M HERE TO HELP:
+
+Tell me:
+✓ Did Ctrl+End work?
+✓ Do you see the green button?
+✓ What does it say?
+✓ Did you click it?
+
+And I'll guide you through the next step! 🚀
+
+════════════════════════════════════════════════════════════════
